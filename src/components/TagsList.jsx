@@ -1,5 +1,8 @@
 import React from "react"
-const TagsList = () => {
+import setupTags from "../utils/setupTech"
+const TagsList = ({ projects }) => {
+  const newTags = setupTags(projects)
+  console.log(newTags, "should be alpha")
   return <div>this is tagslist</div>
 }
 
