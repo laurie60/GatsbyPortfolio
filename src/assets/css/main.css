@@ -195,7 +195,7 @@ button,
   cursor: pointer;
   appearance: none;
   color: var(--white);
-  background: var(--primary-500);
+  /* background: var(--primary-500); */
   border: none;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -203,12 +203,25 @@ button,
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   text-transform: capitalize;
+  background: linear-gradient(
+    to right,
+    blue,
+    rgba(43, 47, 165, 0.958),
+    orange,
+    purple
+  );
+  background-size: 20000% 100%;
+  background-position: right bottom;
+  transition: background-position 1s ease-out;
 }
 button:hover,
 .btn:hover {
-  color: var(--white);
+  background-position: left bottom;
+  transition: background-position 4s ease-out;
+
+  /* color: var(--white);
   background: var(--primary-700);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2); */
 }
 button.small {
   padding: 0.25rem 0.5rem;
