@@ -9,21 +9,22 @@ const Tags = ({
   },
 }) => {
   const niceTags = setupTags(projects)
-  console.log(niceTags)
-  console.log(projects)
+
   return (
     <Layout>
-      <div>
-        <h1>Hello From Tags Page</h1>
-        {niceTags.map(tag => {
-          const [text, number] = tag
-          return (
-            <p>
-              {text} ({number})
-            </p>
-          )
-        })}
-      </div>
+      <main className="page">
+        <section className="tags-page">
+          {niceTags.map((tag, index) => {
+            const [text, number] = tag
+            return (
+              <Link to={`/${text}`} key={index} className="tag">
+                <h5>{text}</h5>
+                <p>{number} project</p>
+              </Link>
+            )
+          })}
+        </section>
+      </main>
     </Layout>
   )
 }

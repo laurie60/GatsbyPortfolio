@@ -13,7 +13,7 @@ const query = graphql`
         projectImage {
           gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
-        languages
+        langsFrames
       }
     }
   }

@@ -49,7 +49,7 @@ export const query = graphql`
         title
         id
         technologies
-        languages
+        langsFrames
         projectImage {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
