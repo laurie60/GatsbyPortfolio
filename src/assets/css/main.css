@@ -715,9 +715,13 @@ form > *:last-child {
   height: 400px;
 }
 .recipe-icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+  align-items: center;
+  justify-content: space-around;
   margin: 2rem 0;
   text-align: center;
 }

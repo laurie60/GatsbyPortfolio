@@ -1,6 +1,6 @@
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import React from "react"
+import React, { Fragment } from "react"
 import Layout from "../components/Layout"
 import {
   SiReact,
@@ -12,7 +12,7 @@ import {
 } from "react-icons/si"
 
 const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
-  const { title, langsFrames = [], projectImage, technologies } = project
+  const { title, langsFrames = ["HTML5"], projectImage, technologies } = project
 
   const pathToImage = getImage(projectImage)
   console.log(langsFrames, "langsFrames")
@@ -39,8 +39,8 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                 party vexillologist copper mug cornhole banh mi taxidermy offal.
               </p>
             </article>
-            <div className="recipe-icons">
-              <article>
+            {langsFrames && (
+              <div className="recipe-icons">
                 {langsFrames.map((language, index) => {
                   if (language === "CSS3")
                     return (
@@ -60,14 +60,33 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                     return (
                       <article>
                         <SiJavascript />
+                        <h5>JavaScript</h5>
                       </article>
                     )
-                  if (language === "Gatsby") return <SiGatsby />
-                  if (language === "React") return <SiReact />
-                  if (language === "Express") return <SiExpress />
+                  if (language === "Gatsby")
+                    return (
+                      <article>
+                        <SiGatsby />
+                        <h5>Gatsby</h5>
+                      </article>
+                    )
+                  if (language === "React")
+                    return (
+                      <article>
+                        <SiReact />
+                        <h5>React</h5>
+                      </article>
+                    )
+                  if (language === "Express")
+                    return (
+                      <article>
+                        <SiExpress />
+                        <h5>Express</h5>
+                      </article>
+                    )
                 })}
-              </article>
-            </div>
+              </div>
+            )}
             <p className="recipe-tags">
               Technologies :{" "}
               {technologies.map((tech, index) => {
