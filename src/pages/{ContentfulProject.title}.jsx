@@ -10,6 +10,7 @@ import {
   SiJavascript,
   SiGatsby,
 } from "react-icons/si"
+import slugify from "slugify"
 
 const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   const {
@@ -96,8 +97,10 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
               <p className="recipe-tags">
                 Tags :{" "}
                 {tags.map((tag, index) => {
+                  const slug = slugify(tag, { lower: true })
+
                   return (
-                    <Link to={`/${tag}`} key={index}>
+                    <Link to={`/tags/${slug}`} key={index}>
                       {tag}
                     </Link>
                   )
