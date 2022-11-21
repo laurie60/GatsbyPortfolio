@@ -9,7 +9,7 @@ const query = graphql`
       nodes {
         title
         id
-        technologies
+        tags
         projectImage {
           gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }

@@ -90,7 +90,7 @@ export const query = graphql`
       nodes {
         title
         id
-        technologies
+        tags
         langsFrames
         projectImage {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)

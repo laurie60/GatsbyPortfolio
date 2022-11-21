@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
-import setupTags from "../utils/setupTech"
+import setupTags from "../utils/setupTags"
 
 const Tags = ({
   data: {
@@ -35,7 +35,7 @@ export const query = graphql`
   query {
     allContentfulProject {
       nodes {
-        technologies
+        tags
       }
     }
   }

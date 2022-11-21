@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import setupTags from "../utils/setupTech"
+import setupTags from "../utils/setupTags"
 
 const TagsList = ({ projects }) => {
   const newTags = setupTags(projects)

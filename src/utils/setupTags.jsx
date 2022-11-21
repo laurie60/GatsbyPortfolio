@@ -1,7 +1,7 @@
 const setupTags = projects => {
   const allTags = {}
   projects.forEach(project => {
-    project.technologies.forEach((tag = []) => {
+    project.tags.forEach((tag = []) => {
       allTags[tag] ? (allTags[tag] += 1) : (allTags[tag] = 1)
     })
   })

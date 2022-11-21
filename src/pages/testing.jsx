@@ -15,18 +15,18 @@ export default Testing
 
 export const data = graphql`
   {
-    site {
-      info: siteMetadata {
+    allContentfulProject(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
         title
-        complexData {
-          age
-          name
+        id
+        tags
+        langsFrames
+        projectImage {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
-        person {
-          age
-          name
-        }
-        simpleData
       }
     }
   }

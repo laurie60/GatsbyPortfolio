@@ -7,7 +7,7 @@ const RecipesList = ({ projects = [] }) => {
   return (
     <div className="recipes-list">
       {projects.map(project => {
-        const { id, title, technologies, languages, projectImage } = project
+        const { id, title, tags, languages, projectImage } = project
         const pathToImage = getImage(projectImage)
         const slug = slugify(title, { lower: true })
         return (
@@ -19,7 +19,7 @@ const RecipesList = ({ projects = [] }) => {
             />
             <h5>{title}</h5>
             <p>
-              Languages: {languages} | Technologies: {technologies}
+              Languages: {languages} | Tags: {tags}
             </p>
           </Link>
         )
