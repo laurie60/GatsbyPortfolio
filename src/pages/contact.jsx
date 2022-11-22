@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
 
@@ -10,6 +11,8 @@ const Contact = ({
 }) => {
   return (
     <Layout>
+      <Head title={"Contact"} />
+
       <main className="page">
         <section className="contact-page">
           <article>
@@ -51,7 +54,11 @@ const Contact = ({
             </p>
           </article>
           <article>
-            <form className="form contact-form">
+            <form
+              className="form contact-form"
+              action="https://formspree.io/f/maykkgwb"
+              method="POST"
+            >
               <div className="form-row">
                 <label htmlFor="name">your name</label>
                 <input type="text" name="name" id="name" />
@@ -62,7 +69,8 @@ const Contact = ({
               </div>
               <div className="form-row">
                 <label htmlFor="message">your message</label>
-                <input type="text" name="message" id="message" />
+                {/* <input type="text" name="message" id="message" /> */}
+                <textarea name="message" id="message"></textarea>
               </div>
               <button type="submit" className="btn-block">
                 submit

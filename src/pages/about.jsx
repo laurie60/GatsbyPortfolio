@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
 
@@ -11,6 +12,8 @@ const about = ({
 }) => {
   return (
     <Layout>
+      <Head title={"About"} />
+
       <main className="page">
         <section className="about-page">
           <article>

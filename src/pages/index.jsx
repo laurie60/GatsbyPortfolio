@@ -1,11 +1,13 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import AllRecipes from "../components/AllRecipes"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
 
 export default function Home() {
   return (
     <Layout>
+      <Head title={"Home Page"} />
       <main className="page">
         <header className="hero">
           <StaticImage

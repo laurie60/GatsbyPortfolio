@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import slugify from "slugify"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
 import setupTags from "../utils/setupTags"
 
@@ -13,6 +14,8 @@ const Tags = ({
 
   return (
     <Layout>
+      <Head title={"Tags"} />
+
       <main className="page">
         <section className="tags-page">
           {niceTags.map((tag, index) => {
