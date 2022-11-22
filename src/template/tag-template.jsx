@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
+import Head from "../components/Head"
 import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
 
@@ -8,6 +9,7 @@ const TagTemplate = ({ data, pageContext }) => {
   console.log(projects)
   return (
     <Layout>
+      <Head title={pageContext.tag} />
       <main className="page">
         <h2>{pageContext.tag}</h2>
         <div className="tag-recipes">

@@ -12,7 +12,7 @@ const about = ({
 }) => {
   return (
     <Layout>
-      <Head title={"About"} />
+      <Head title={"About"} description={"About Page"} />
 
       <main className="page">
         <section className="about-page">

@@ -1,12 +1,25 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
+const query = graphql`
+  {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`
+
 const Head = ({ title, description }) => {
+  const { site } = useStaticQuery(query)
+  const metaDescription = description || site.siteMetadata.description
   return (
     <>
-      <meta description={description} charSet="utf-8" />
+      <meta description={metaDescription} charSet="utf-8" />
       <htmlAttributes></htmlAttributes>
-      <title>{title}</title>
+      <title>{`${title} | ${site.siteMetadata.title}`}</title>
     </>
   )
 }

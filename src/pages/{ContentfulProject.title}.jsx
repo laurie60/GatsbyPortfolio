@@ -11,6 +11,7 @@ import {
   SiGatsby,
 } from "react-icons/si"
 import slugify from "slugify"
+import Head from "../components/Head"
 
 const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   const {
@@ -27,6 +28,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
 
   return (
     <Layout>
+      <Head title={title} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
