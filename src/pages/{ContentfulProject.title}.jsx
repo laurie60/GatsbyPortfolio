@@ -23,7 +23,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   } = project
 
   console.log(content, "contentssss")
-  const { inDepth } = content
+  const { inDepth, descPara } = content
   const pathToImage = getImage(projectImage)
 
   return (
@@ -39,15 +39,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
             />
             <article className="recipe-info">
               <h2>{title}</h2>
-              <p>
-                I'm baby shoreditch fashion axe asymmetrical umami +1.
-                Sustainable PBR&B la croix you probably haven't heard of them
-                snackwave. Master cleanse thundercats poke 90's, twee church-key
-                yr vaporware. Blog woke church-key DSA, coloring book vaporware
-                blue bottle vexillologist echo park polaroid venmo. Irony
-                freegan bicycle rights echo park leggings +1 green juice art
-                party vexillologist copper mug cornhole banh mi taxidermy offal.
-              </p>
+              <p>{descPara} </p>
               {langsFrames && (
                 <div className="recipe-icons">
                   {langsFrames.map((language, index) => {
