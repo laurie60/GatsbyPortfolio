@@ -25,7 +25,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   console.log(content, "contentssss")
   const { inDepth, descPara } = content
   const pathToImage = getImage(projectImage)
-
+  console.log(descPara, "desc para in wotsit#######")
   return (
     <Layout>
       <Head title={title} />
