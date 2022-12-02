@@ -30,18 +30,18 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
     <Layout>
       <Head title={title} />
       <main className="page">
-        <div className="recipe-page">
-          <section className="recipe-hero">
+        <div className="project-page">
+          <section className="project-hero">
             <GatsbyImage
               image={pathToImage}
               alt={title}
               className="about-img"
             />
-            <article className="recipe-info">
+            <article className="project-info">
               <h2>{title}</h2>
               <p>{descPara} </p>
               {langsFrames && (
-                <div className="recipe-icons">
+                <div className="project-icons">
                   {langsFrames.map((language, index) => {
                     if (language === "CSS3")
                       return (
@@ -88,7 +88,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                   })}
                 </div>
               )}
-              <p className="recipe-tags">
+              <p className="project-tags">
                 Tags :{" "}
                 {tags.map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
@@ -102,7 +102,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
               </p>
             </article>
           </section>
-          <section className="recipe-content">
+          <section className="project-content">
             <article>
               <h4>In depth</h4>
               {inDepth.map((item, index) => {

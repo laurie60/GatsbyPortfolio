@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import Head from "../components/Head"
 import Layout from "../components/Layout"
-import RecipesList from "../components/RecipesList"
+import ProjectsList from "../components/ProjectsList"
 
 const TagTemplate = ({ data, pageContext }) => {
   const projects = data.allContentfulProject.nodes
@@ -12,8 +12,8 @@ const TagTemplate = ({ data, pageContext }) => {
       <Head title={pageContext.tag} />
       <main className="page">
         <h2>{pageContext.tag}</h2>
-        <div className="tag-recipes">
-          <RecipesList projects={projects}></RecipesList>
+        <div className="tag-projects">
+          <ProjectsList projects={projects} />
         </div>
       </main>
       <div>

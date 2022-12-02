@@ -1,5 +1,5 @@
 import React from "react"
-import AllRecipes from "../components/AllRecipes"
+import AllProjects from "../components/AllProjects"
 import Head from "../components/Head"
 import Layout from "../components/Layout"
 
@@ -8,8 +8,7 @@ const Recipies = () => {
     <Layout>
       <Head title={"Projects"} />
       <main className="page">
-        <h1>Hello From Recipies Page</h1>
-        <AllRecipes />
+        <AllProjects />
       </main>
     </Layout>
   )

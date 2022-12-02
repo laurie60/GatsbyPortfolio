@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import RecipesList from "./RecipesList"
+import ProjectsList from "./ProjectsList"
 import TagsList from "./TagsList"
 
 const query = graphql`
@@ -8,6 +8,7 @@ const query = graphql`
     allContentfulProject {
       nodes {
         title
+        type
         id
         tags
         projectImage {
@@ -19,17 +20,17 @@ const query = graphql`
   }
 `
 
-const AllRecipes = () => {
+const AllProjects = () => {
   const {
     allContentfulProject: { nodes: projects },
   } = useStaticQuery(query)
   console.log(projects)
   return (
-    <section className="recipes-container">
+    <section className="projects-container">
       <TagsList projects={projects} />
-      <RecipesList projects={projects} />
+      <ProjectsList projects={projects} />
     </section>
   )
 }
 
-export default AllRecipes
+export default AllProjects

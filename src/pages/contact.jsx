@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import Head from "../components/Head"
 import Layout from "../components/Layout"
-import RecipesList from "../components/RecipesList"
+import ProjectsList from "../components/ProjectsList"
 
 const Contact = ({
   data: {
@@ -78,9 +78,9 @@ const Contact = ({
             </form>
           </article>
         </section>
-        <section className="featured-recipe">
+        <section className="featured-project">
           <h5>Look at this Awesomesouce!</h5>
-          <RecipesList projects={projects} />
+          <ProjectsList projects={projects} />
         </section>
       </main>
     </Layout>
@@ -92,11 +92,12 @@ export default Contact
 export const query = graphql`
   {
     allContentfulProject(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { featured: { eq: true } }
     ) {
       nodes {
         title
+        type
         id
         tags
         langsFrames

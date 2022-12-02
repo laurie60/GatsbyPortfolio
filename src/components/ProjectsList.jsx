@@ -3,24 +3,22 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import slugify from "slugify"
 
-const RecipesList = ({ projects = [] }) => {
+const ProjectsList = ({ projects = [] }) => {
   return (
-    <div className="recipes-list">
+    <div className="projects-list">
       {projects.map(project => {
-        const { id, title, tags, languages, projectImage } = project
+        const { id, title, tags, languages, projectImage, type } = project
         const pathToImage = getImage(projectImage)
         const slug = slugify(title, { lower: true })
         return (
-          <Link key={id} to={`/${slug}`} className="recipe">
+          <Link key={id} to={`/${slug}`} className="project">
             <GatsbyImage
               image={pathToImage}
-              className="recipe-img"
+              className="project-img"
               alt={title}
             />
             <h5>{title}</h5>
-            <p>
-              Languages: {languages} | Tags: {tags}
-            </p>
+            <p>{type}</p>
           </Link>
         )
       })}
@@ -28,4 +26,4 @@ const RecipesList = ({ projects = [] }) => {
   )
 }
 
-export default RecipesList
+export default ProjectsList

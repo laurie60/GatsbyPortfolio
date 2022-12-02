@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import AllRecipes from "../components/AllRecipes"
+import AllProjects from "../components/AllProjects"
 import Head from "../components/Head"
 import Layout from "../components/Layout"
 
@@ -19,12 +19,12 @@ export default function Home() {
           ></StaticImage>
           <div className="hero-container">
             <div className="hero-text">
-              <h1>simply recipes</h1>
-              <h4>no fluff, just recipes</h4>
+              <h1>Projects</h1>
+              <h4>Take A Look!</h4>
             </div>
           </div>
         </header>
-        <AllRecipes />
+        <AllProjects />
       </main>
     </Layout>
   )
