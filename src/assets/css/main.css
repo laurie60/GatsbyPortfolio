@@ -366,7 +366,7 @@ form > *:last-child {
 }
 .nav-header img {
   width: 200px;
-  margin-left: -6px;
+  /* margin-left: -6px; */
   margin-bottom: -9px;
 }
 .nav-btn {
@@ -739,6 +739,10 @@ form > *:last-child {
 .project-icons p {
   color: var(--grey-800);
 }
+.project-links {
+  background: var(--primary-200);
+}
+
 .project-tags {
   display: flex;
   align-items: center;
@@ -746,6 +750,7 @@ form > *:last-child {
   font-size: 0.7em;
   font-weight: 600;
 }
+
 .project-tags a {
   background: var(--primary-500);
   border-radius: var(--borderRadius);

@@ -8,9 +8,8 @@ const TagsList = ({ projects }) => {
 
   return (
     <div className="tag-container">
-      <h4>Projects</h4>
+      <h4>tags:</h4>
       <div className="tags-list">
-        s
         {newTags.map((tag, index) => {
           const [text, value] = tag
           const slug = slugify(text, { lower: true })
