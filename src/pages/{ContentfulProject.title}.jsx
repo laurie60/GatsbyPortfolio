@@ -25,7 +25,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   } = project
 
   console.log(content, "contentssss")
-  const { inDepth, descPara } = content
+  const { inDepth = ["hello", "there"], descPara } = content
   const pathToImage = getImage(projectImage)
   return (
     <Layout>

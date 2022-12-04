@@ -675,15 +675,31 @@ form > *:last-child {
   padding-bottom: 3rem;
 }
 .tag {
-  background: var(--grey-700);
+  /* background: var(--grey-700); */
   border-radius: var(--borderRadius);
   text-align: center;
   color: var(--white);
-  transition: var(--transition);
   padding: 0.75rem 0;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  background: linear-gradient(
+    to right,
+    var(--primary-900),
+    var(--primary-800),
+    var(--primary-700),
+    var(--primary-600),
+    var(--primary-500),
+    var(--primary-400),
+    var(--grey-700)
+  );
+  background-size: 20000% 100%;
+  background-position: right bottom;
+  transition: background-position 1s ease-out;
 }
 .tag:hover {
-  background: var(--primary-500);
+  /* background: var(--primary-500); */
+  background-position: left bottom;
+  transition: background-position 4s ease-out;
 }
 .tag h5,
 .tag p {
