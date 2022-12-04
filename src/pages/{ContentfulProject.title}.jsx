@@ -139,10 +139,10 @@ export const query = graphql`
   query ($title: String) {
     contentfulProject(title: { eq: $title }) {
       title
+      liveLink
       langsFrames
       tags
       gitHubLink
-      liveLink
       projectImage {
         gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
       }
