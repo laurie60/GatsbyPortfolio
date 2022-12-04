@@ -24,7 +24,11 @@ const Tags = ({
             return (
               <Link to={`/tags/${slug}`} key={index} className="tag">
                 <h5>{text}</h5>
-                <p>{number} project</p>
+                {number > 1 ? (
+                  <p>{number} projects</p>
+                ) : (
+                  <p>{number} project</p>
+                )}
               </Link>
             )
           })}

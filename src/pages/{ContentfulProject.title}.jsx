@@ -20,12 +20,13 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
     langsFrames = ["HTML5"],
     projectImage,
     tags,
+    gitHubLink,
+    liveLink,
   } = project
 
   console.log(content, "contentssss")
-  const { inDepth, descPara } = content
+  const { inDepth = ["hello", "there"], descPara } = content
   const pathToImage = getImage(projectImage)
-  console.log(descPara, "desc para in wotsit#######")
   return (
     <Layout>
       <Head title={title} />
@@ -38,8 +39,6 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
               className="about-img"
             />
             <article className="project-info">
-              <h2>{title}</h2>
-              <p>{descPara} </p>
               {langsFrames && (
                 <div className="project-icons">
                   {langsFrames.map((language, index) => {
@@ -88,6 +87,19 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                   })}
                 </div>
               )}
+              <h2>{title}</h2>
+              <p>{descPara} </p>
+              <p className="project-tags">
+                Links :{" "}
+                <a className="project-links" href={gitHubLink}>
+                  Project GitHub Repo
+                </a>
+                {liveLink && (
+                  <a classname="project-links" href={liveLink}>
+                    Live project link{" "}
+                  </a>
+                )}
+              </p>
               <p className="project-tags">
                 Tags :{" "}
                 {tags.map((tag, index) => {
@@ -129,11 +141,14 @@ export const query = graphql`
       title
       langsFrames
       tags
+      gitHubLink
+      liveLink
       projectImage {
         gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
       }
       content {
         inDepth
+        descPara
       }
     }
   }
