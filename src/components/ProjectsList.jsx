@@ -7,7 +7,7 @@ const ProjectsList = ({ projects = [] }) => {
   return (
     <div className="projects-list">
       {projects.map(project => {
-        const { id, title, tags, languages, projectImage, type } = project
+        const { id, title, projectImage, type } = project
         const pathToImage = getImage(projectImage)
         const slug = slugify(title, { lower: true })
         return (

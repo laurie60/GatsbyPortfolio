@@ -12,20 +12,19 @@ import {
 } from "react-icons/si"
 import slugify from "slugify"
 import Head from "../components/Head"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   const {
-    content,
     title,
     langsFrames = ["HTML5"],
     projectImage,
     tags,
     gitHubLink,
     liveLink,
+    descPara,
   } = project
 
-  console.log(content, "contentssss")
-  const { inDepth = ["hello", "there"], descPara } = content
   const pathToImage = getImage(projectImage)
   return (
     <Layout>
@@ -88,14 +87,14 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                 </div>
               )}
               <h2>{title}</h2>
-              <p>{descPara} </p>
+              <p>{renderRichText(descPara.raw)} </p>
               <p className="project-tags">
                 Links :{" "}
-                <a className="project-links" href={gitHubLink}>
+                <a className="project-links" href={gitHubLink} target="_blank">
                   Project GitHub Repo
                 </a>
                 {liveLink && (
-                  <a classname="project-links" href={liveLink}>
+                  <a classname="project-links" href={liveLink} target="_blank">
                     Live project link{" "}
                   </a>
                 )}
@@ -116,7 +115,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
           </section>
           <section className="project-content">
             <article>
-              <h4>In depth</h4>
+              {/* <h4>In depth</h4>
               {inDepth.map((item, index) => {
                 return (
                   <div key={index} className="single-instruction">
@@ -126,7 +125,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                     <p>{item[1]}</p>
                   </div>
                 )
-              })}
+              })} */}
             </article>
           </section>
         </div>
@@ -143,12 +142,11 @@ export const query = graphql`
       langsFrames
       tags
       gitHubLink
+      descPara {
+        raw
+      }
       projectImage {
         gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
-      }
-      content {
-        inDepth
-        descPara
       }
     }
   }
