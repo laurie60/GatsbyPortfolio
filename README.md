@@ -5,7 +5,7 @@ The NC-news website is live and hosted on Netlify:
 
 This repo contains a personal portfolio website where I can show off my projects and introduce myself.
 
-I have used [Contenful](https://www.contentful.com)as a headless CMS provider and GraphQL to query my data.
+I have used [Contenful](https://www.contentful.com) as a headless CMS provider and GraphQL to query my data.
 
 ## Local hosting
 
