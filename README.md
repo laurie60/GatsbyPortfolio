@@ -3,7 +3,9 @@
 The NC-news website is live and hosted on Netlify:
 [lmm-portfolio.netlify.app](https://lmm-portfolio.netlify.app)
 
-This repo contains a personal portfolio website where I can show off my projects and introduce myself. 
+This repo contains a personal portfolio website where I can show off my projects and introduce myself.
+
+I have used [Contenful](https://www.contentful.com) as a Headless CMS provider and GraphQL to query the contentful data.
 
 ## Local hosting
 
