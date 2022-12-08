@@ -5,11 +5,10 @@ const Footer = () => {
   return (
     <footer className="page-footer">
       <p>
-        {new Date().getFullYear()} <span>LMM's Portfolio site</span>
+        {new Date().getFullYear()} LMM's Portfolio site
         <a href="https://github.com/laurie60">
           {" "}
-          <SiGithub />
-          GitHub
+          <SiGithub /> GitHub
         </a>
         <a href="https://www.linkedin.com/in/laurence-morris-moody/">
           {" "}

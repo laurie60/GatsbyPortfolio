@@ -13,6 +13,7 @@ import {
 import slugify from "slugify"
 import Head from "../components/Head"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
   const {
@@ -24,6 +25,8 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
     liveLink,
     descPara,
   } = project
+
+  const parsed = JSON.parse(descPara.raw)
 
   const pathToImage = getImage(projectImage)
   return (
@@ -87,14 +90,25 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                 </div>
               )}
               <h2>{title}</h2>
-              <p>{renderRichText(descPara.raw)} </p>
+              {/* {console.log(JSON.parse(descPara.raw))} */}
+              <p>{documentToReactComponents(parsed)} </p>
               <p className="project-tags">
                 Links :{" "}
-                <a className="project-links" href={gitHubLink} target="_blank">
+                <a
+                  className="project-links"
+                  href={gitHubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Project GitHub Repo
                 </a>
                 {liveLink && (
-                  <a classname="project-links" href={liveLink} target="_blank">
+                  <a
+                    classname="project-links"
+                    href={liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Live project link{" "}
                   </a>
                 )}
