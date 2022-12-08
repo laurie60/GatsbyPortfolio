@@ -1,4 +1,4 @@
-# NC-news's Front-end
+# My Personal Portfolio, made with [Gatsby](https://www.gatsbyjs.com)
 
 The NC-news website is live and hosted on Netlify:
 [lmm-portfolio.netlify.app](https://lmm-portfolio.netlify.app)
