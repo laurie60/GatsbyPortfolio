@@ -9,7 +9,8 @@ const Footer = () => {
         <a href="https://github.com/laurie60">
           {" "}
           <SiGithub /> GitHub
-        </a>
+        </a>{" "}
+        |
         <a href="https://www.linkedin.com/in/laurence-morris-moody/">
           {" "}
           <SiLinkedin /> LinkedIn

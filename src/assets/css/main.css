@@ -367,7 +367,8 @@ form > *:last-child {
 .nav-header img {
   width: 200px;
   /* margin-left: -6px; */
-  margin-bottom: -9px;
+  /* margin-bottom: -9px; */
+  margin-top: 10px;
 }
 .nav-btn {
   padding: 0.15rem 0.75rem;

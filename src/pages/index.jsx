@@ -3,6 +3,7 @@ import React from "react"
 import AllProjects from "../components/AllProjects"
 import Head from "../components/Head"
 import Layout from "../components/Layout"
+import { HiOutlineArrowDown } from "react-icons/hi"
 
 export default function Home() {
   return (
@@ -20,7 +21,11 @@ export default function Home() {
           <div className="hero-container">
             <div className="hero-text">
               <h1>Projects</h1>
-              <h4>Take A Look!</h4>
+              <h4>
+                <HiOutlineArrowDown />
+                &nbsp;&nbsp; Take A Look!&nbsp;&nbsp;&nbsp;
+                {/* <HiOutlineArrowDown /> */}
+              </h4>
             </div>
           </div>
         </header>

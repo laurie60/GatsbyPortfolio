@@ -109,7 +109,7 @@ const ProjectTemplate = ({ data: { contentfulProject: project } }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live project link{" "}
+                    Live project{" "}
                   </a>
                 )}
               </p>

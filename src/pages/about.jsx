@@ -17,12 +17,24 @@ const about = ({
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>hello from about</h2>
-            <p>I'm a babnveh couloring book pioke taxidermy</p>
-            <p>hipster yah yah</p>
-            <Link to="/contact" className="btn">
-              contact
-            </Link>
+            <h2>Hello</h2>
+
+            <p>
+              I am a coder who has recently completed a software engineering
+              course at{" "}
+              <a href="https://northcoders.com/our-courses/coding-bootcamp">
+                Northcoders
+              </a>{" "}
+              which is an industry leading TechEd provider based in Manchester.
+              Since completing the course I have created various projects which
+              you can find out more about on this website. I have also started
+              to contribute to open source projects via GitHub, including to{" "}
+              <a href="https://thecodingtrain.com">the Coding Train website</a>{" "}
+              .
+            </p>
+            <a href="https://github.com/laurie60" className="btn">
+              My GitHub
+            </a>
           </article>
           <StaticImage
             src="../assets/images/about.jpeg"
@@ -32,7 +44,7 @@ const about = ({
           ></StaticImage>
         </section>
         <section className="featured-project">
-          <h5>Look at this Awesomesouce!</h5>
+          <h5>My Projects!</h5>
           <ProjectsList projects={projects} />
         </section>
       </main>
