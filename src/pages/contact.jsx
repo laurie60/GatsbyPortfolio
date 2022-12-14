@@ -19,38 +19,12 @@ const Contact = ({
             {" "}
             <h3>Want to get in touch?</h3>
             <p>
-              I'm baby try-hard crucifix semiotics keytar intelligentsia
-              everyday carry. Pork belly poutine mlkshk church-key bushwick air
-              plant banh mi iceland readymade twee pok pok. Fit Brooklyn pug,
-              knausgaard fanny pack meditation farm-to-table irony big mood
-              subway tile chicharrones. Succulents yuccie authentic yr.
-              Gochujang kogi unicorn, stumptown distillery man bun viral man
-              braid echo park keffiyeh. Cray subway tile iPhone single-origin
-              coffee banjo. Cronut tumblr subway tile banjo la croix meh. Vice
-              prism yuccie dreamcatcher meditation mumblecore gluten-free
-              whatever cliche put a bird on it. Williamsburg umami wolf, cliche
-              enamel pin lomo poutine +1 air plant yuccie fit roof party tofu
-              mumblecore palo santo.
-            </p>
-            <p>
-              Kinfolk green juice mumblecore ennui umami gochujang kogi put a
-              bird on it praxis. Pop-up biodiesel vaporware affogato master
-              cleanse, hot chicken banjo kickstarter portland venmo art party
-              glossier big mood godard. Selvage copper mug lumbersexual,
-              church-key fingerstache lo-fi twee beard four loko biodiesel
-              disrupt aesthetic. Gochujang slow-carb scenester, portland
-              meditation tacos umami pinterest gluten-free ethical man bun
-              cold-pressed yuccie blog humblebrag. Normcore 90's green juice,
-              hammock vice shabby chic mlkshk kogi bodega boys ethical semiotics
-              ascot tumeric.
-            </p>
-            <p>
-              I'm baby gatekeep prism mukbang intelligentsia raw denim twee.
-              Ethical bodega boys bushwick gochujang affogato yr tilde echo park
-              fanny pack ascot. Fam PBR&B banjo jean shorts trust fund, butcher
-              squid plaid. Portland health goth DIY YOLO neutra post-ironic.
-              Quinoa tote bag 90's glossier. Tote bag sus forage bespoke
-              succulents. Snackwave occupy ennui meditation cliche.
+              Please use the form on the right to send me email, alternatively
+              please contact me via{" "}
+              <a href="https://www.linkedin.com/in/laurence-morris-moody/">
+                LinkedIn
+              </a>
+              .
             </p>
           </article>
           <article>
@@ -79,7 +53,7 @@ const Contact = ({
           </article>
         </section>
         <section className="featured-project">
-          <h5>Look at this Awesomesouce!</h5>
+          <h5>Check out these Projects!</h5>
           <ProjectsList projects={projects} />
         </section>
       </main>
